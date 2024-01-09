@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Buttons = (setElement) => {
+const Buttons = ({setCurrentElement}) => {
 
     const buttons = [
         {
@@ -26,18 +26,6 @@ const Buttons = (setElement) => {
         {
             text: "italic",
             element: "i"
-        },
-        {
-            text: "left",
-            element: "justify-content: left"
-        },
-        {
-            text: "center",
-            element: "justify-content: center"
-        },
-        {
-            text: "right",
-            element: "justify-content: right"
         }
     ];
 
@@ -45,7 +33,7 @@ const Buttons = (setElement) => {
         <div>
             {
                 buttons.map((rr) => (
-                    <button onClick={() => setElement(rr.element)}>
+                    <button onClick={() => setCurrentElement(rr.element)}>
                         {rr.text}
                     </button>
                 ))

@@ -19,11 +19,12 @@ function App() {
     return (
         <div className="App">
             <h1> Welcome TimTam App</h1>
-            <Buttons setElement={setCurrentElement}/>
-
-            {texts.map((text11) =>
-                <Text element = {currentElement}  text = {text11}/>
-            )}
+            <Buttons setCurrentElement={setCurrentElement}/>
+            <div>
+                {texts.map((text) => (
+                    <Text text={text} currentElement={currentElement}/>
+                ))}
+            </div>
         </div>
     );
 }
